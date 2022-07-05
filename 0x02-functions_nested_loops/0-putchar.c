@@ -1,20 +1,20 @@
-#include <unistd.h>
-#include <main.h>
+#include "main.h"
 
 /**
- *  * main - Check description
- *   * Description: a program that prints _putchar, followed by a new line.
- *    * Return: 0.
+ * *main - prints the word _putchar, followed by a new line
+ * *Return: 0 on success execution.
  */
 
 int main(void)
 
 {
-
-char word[8] = "_putchar";
-int i;
-for (i = 0; i < 8; i++)
-_putchar(word[i]);
-_putchar('\n');
+char s[] = "_putchar";
+int i = 0;
+while (s[i] != '\0')
+{
+_putchar(s[i]);
+i++;
+}
+_putchar(10);
 return (0);
 }
