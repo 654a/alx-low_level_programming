@@ -1,62 +1,49 @@
 #include "main.h"
 
 /**
- * print_number - prints a number using _putchar
- * @n: number to print
- * Return: void
+ * print_number - Function that prints an integer.
+ * @n: int type number
+ * Description: Can only use _putchar to print.
  */
 
 void print_number(int n)
 
 {
-	unsigned int un = 0;
+	long m; /* power of 10 */
+	int c; /* boolean check */
+	long num; /* convert int to long */
 
-if (n < 0)
-{
-if (n < 1000000000)
-n = -n;
-un = n;
-_putchar(45);
-num_to_char(n);
-}
-else
-{
-un = n;
-num_to_char(un);
-}
-}
+	num = n;
+	/* negatives */
+	if (num < 0)
+	{
+		num *= -1;
+		_putchar('-');
+	}
 
-/**
- * num_to_char - transforms a number with 1 or more digits into a char
- * @n: number to print
- * Return: void
- */
+	/* count up */
+	m = 1;
+	c = 1;
+	while (c)
+	{
+		if (num / (m * 10) > 0)
+			m *= 10;
+		else
+			c = 0;
+	}
 
-void num_to_char(unsigned int n)
-
-{
-unsigned int d = 10;
-
-if (n < d)
-{
-_putchar('0' + n);
-}
-else
-{
-while (n >= d)
-{
-d *= 10;
-if (d == 1000000000)
-break;
-}
-if (!(d == 1000000000) || n == 123456789)
-d /= 10;
-_putchar('0' + n / d);
-while (d != 10)
-{
-d /= 10;
-_putchar('0' + (n / d) % 10);
-}
-_putchar('0' + n % 10);
-}
+	/* count down */
+	while (num >= 0)
+	{
+		if (m == 1)
+		{
+			_putchar(num % 10 + '0');
+			num = -1;
+		}
+		else
+		{
+			_putchar((num / m % 10) + '0');
+			m /= 10;
+		}
+	}
 }
