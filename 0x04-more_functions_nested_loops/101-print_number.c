@@ -11,7 +11,7 @@ void print_number(int n)
 {
 	unsigned int m; /* power of 10 */
 	int c; /* boolean check */
-	long num; /* convert int to long */
+	unsigned int num; /* convert int to long */
 
 	num = n;
 	/* negatives */
