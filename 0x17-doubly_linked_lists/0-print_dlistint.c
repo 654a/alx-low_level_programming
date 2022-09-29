@@ -1,6 +1,6 @@
 /*
  * File: 0-print_dlistint.c
- * Auth: Nicolas Peter Wanjau
+ * Auth: Y
  */
 
 #include "lists.h"
