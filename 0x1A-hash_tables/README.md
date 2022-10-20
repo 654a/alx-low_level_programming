@@ -1,5 +1,5 @@
 
-You just released the advanced tasks of this project. Have fun!
+u just released the advanced tasks of this project. Have fun!
 0x1A. C - Hash tables
 C
 Algorithm
