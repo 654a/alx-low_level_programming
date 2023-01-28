@@ -1,5 +1,5 @@
 
-You have a captain's log due before 2023-01-29 (in 1 day)! Log it now!
+u have a captain's log due before 2023-01-29 (in 1 day)! Log it now!
 You just released the advanced tasks of this project. Have fun!
 0x1E. C - Search Algorithms
 C
